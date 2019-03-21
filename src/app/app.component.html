@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<app-header *ngIf="this.auth.getUser()"></app-header>
+      <!-- sidenav content -->
+      <app-toolbar *ngIf="this.auth.getUser()"></app-toolbar>
+      <div class="container-fluid">
+        <!-- main content -->
+        <router-outlet></router-outlet>
+      </div>
+<app-footer *ngIf="this.auth.getUser()"></app-footer>
